@@ -1,0 +1,92 @@
+import java.util.Scanner;
+class Main {
+public static void main(String[] args) {
+    
+    double firstN;
+    String Nchar;
+    double sumAll = 0;
+    int numbers; 
+    String name; 
+    String question; 
+
+Scanner input = new Scanner(System.in);
+
+System.out.println("What is your name?");
+name = input.nextLine(); 
+
+System.out.println("Do you want to take AP Computer Science A? :D "); 
+question = input.nextLine();  
+
+
+System.out.println("How many numbers do you want to sum?");
+numbers = input.nextInt();
+
+for (int i=1; i<=numbers; i++) {
+
+System.out.println("Enter an double: ");
+firstN = input.nextDouble();
+System.out.println();
+sumAll+=firstN;
+//System.out.print(sumAll);
+}
+System.out.println("What strings do you want to use to draw the line?");
+Nchar = input.nextLine();
+Nchar = input.nextLine();
+
+input.close();
+
+
+for(int i=1; i<=((int)(sumAll+=0.5)/(3)); i++) {
+  System.out.print(Nchar);
+
+}
+System.out.println();
+for(int i=1; i<=((int)(sumAll+=0.5)/(5)); i++) {
+  System.out.print(Nchar);
+
+}
+System.out.println();
+for(int i=1; i<=((int)(sumAll+=0.5)/(7)); i++) {
+  System.out.print(Nchar);
+
+}
+System.out.println();
+for(int i=1; i<=((int)(sumAll+=0.5)/(11)); i++) {
+  System.out.print(Nchar);
+   
+    }
+  }
+}
+/* 
+Java Project 1 
+
+Write a program that asks the user for a series of doubles (it could be one, it could be many; the program should ask how many). The program should sum these numbers, and print a line as “long” as the sum - it should build this line by repeating a string that the user provided.
+
+So, if the sum of the number is 20.4, and the string provided is “*” (just an asterisk) , the output should be “********************” (20 asterisks, the program will round the sum)
+
+The program should finally print “scaled” versions of the same line: Divide the length by 3, 5, 7 and 11.
+
+Here is how a sample run of this program should look (input is bolded):
+
+How many numbers do you want to sum?
+5
+Enter an double:
+1.2
+Enter an double:
+2.4
+Enter an double:
+3.3
+Enter an double:
+4.1
+Enter an double:
+3.6
+What string do you want to use to draw the line?
+OLIO
+OLIOOLIOOLIOOLIOOLIOOLIOOLIOOLIOOLIOOLIOOLIOOLIOOLIOOLIO
+OLIOOLIOOLIOOLIO
+OLIOOLIO
+OLIOOLIO
+OLIO
+
+Note: After using Scanner.nextInt() or Scanner.nextDouble(), using an input.nextLine() will give you an empty line. You should use a second input.nextLine() right after, in order to really ask for a string.
+*/ 
